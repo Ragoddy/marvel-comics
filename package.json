@@ -1,0 +1,22 @@
+{
+  "name": "ragoddy-marvel-api",
+  "version": "1.0.0",
+  "description": "Aplicacion de ejemplo usando ionic framework, angular y api de marvel comics",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "marvel",
+    "angular",
+    "ionic",
+    "css",
+    "js",
+    "ragoddy"
+  ],
+  "author": "@ragoddy",
+  "license": "ISC",
+  "devDependencies": {
+    "ionic": "^1.3.14"
+  }
+}
