@@ -1,6 +1,9 @@
 # README #
 
-Applicacion de ejemplo utilizando la api de marvel comics http://developer.marvel.com/
+Aplicacion de ejemplo utilizando la api de marvel comics http://developer.marvel.com/
+
+Uso de phonegap build para generar apps para IOS ANDROID y WPHONE https://build.phonegap.com
+
 
 
 ### pasos para iniciar la app
@@ -20,3 +23,6 @@ copiar y pegar las llaves en las siguientes variables del archivo app.js
 * Ionic framework
 * MD5 angular
 * api marvel
+
+
+### @Ragoddy
