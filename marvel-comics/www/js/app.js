@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('ragoddy-marvel', ['ionic', 'ragoddy-marvel.controllers', 'ragoddy-marvel.services', 'angular-md5'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -18,6 +18,11 @@ angular.module('ragoddy-marvel', ['ionic', 'ragoddy-marvel.controllers', 'ragodd
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    // incluir credenciales suministradas por la api de marvel
+    $rootScope.key_public = "f1904c78bf332a33a73b7fc9158eef20"
+    $rootScope.key_private = "e8c39517a871489890bba210b50e376cbbb92540"
+
   });
 })
 
@@ -43,46 +48,64 @@ angular.module('ragoddy-marvel', ['ionic', 'ragoddy-marvel.controllers', 'ragodd
 
   // Each tab has its own nav history stack:
 
-  .state('tab.personajes', {
-    url: '/personajes',
+  .state('tab.characters', {
+    url: '/characters',
     views: {
-      'tab-personajes': {
-        templateUrl: 'templates/tab-personajes.html',
-        controller: 'PersonajesCtrl'
+      'tab-characters': {
+        templateUrl: 'templates/tab-characters.html',
+        controller: 'CharactersCtrl'
+      }
+    }
+  })
+  .state('tab.characters-detail', {
+    url: '/characters/:characterId',
+    views: {
+      'tab-characters': {
+        templateUrl: 'templates/detail-character.html',
+        controller: 'CharacterDetailCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.comics', {
+      url: '/comics',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-comics': {
+          templateUrl: 'templates/tab-comics.html',
+          controller: 'ComicsCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    .state('tab.comics-detail', {
+      url: '/comics/:comicId',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-comics': {
+          templateUrl: 'templates/detail-comic.html',
+          controller: 'ComicDetailCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.events', {
+    url: '/events',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-events': {
+        templateUrl: 'templates/tab-events.html',
+        controller: 'EventsCtrl'
       }
     }
-  });
+  })
+  .state('tab.events-detail', {
+    url: '/events/:eventId',
+    views: {
+      'tab-events': {
+        templateUrl: 'templates/detail-event.html',
+        controller: 'EventDetailCtrl'
+      }
+    }
+  })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/personajes');
+  $urlRouterProvider.otherwise('/tab/characters');
 
 });

@@ -1,0 +1,19 @@
+<ion-view view-title="Detail Character">
+  <ion-content>
+    <div class="list card" ng-repeat="cd in character_detail">
+      <div class="item item-avatar">
+        <img ng-src="{{cd.thumbnail.path}}.{{cd.thumbnail.extension}}">
+        <h2>{{cd.name}}</h2>
+        <p>{{cd.modified | date:"dd/MM/yyyy" }}</p>
+      </div>
+      <div class="item item-body">
+        <p>{{cd.description}}</p>
+        <p>
+          <a href="" class="subdued">{{cd.comics.available}} Comics</a>
+          <a href="" class="subdued">{{cd.events.available}} Eventes</a> 
+          <a href="" class="subdued">{{cd.series.available}} Series</a>
+        </p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

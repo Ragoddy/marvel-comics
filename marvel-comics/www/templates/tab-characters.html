@@ -1,0 +1,13 @@
+<ion-view view-title="Characters">
+  <ion-content class="padding">
+    <div class="list">
+        <a class="item item-thumbnail-left" ng-repeat="p in personajes" href="#/tab/characters/{{ p.id }}">
+          <img ng-src="{{p.thumbnail.path}}.{{p.thumbnail.extension}}">
+          <h2>{{p.name}}</h2>
+          <p>{{p.description}}</p>
+          <p>{{p.comics.available}} Comics</p>
+          <p>{{p.series.available}} Series</p>
+        </a>
+    </div>
+  </ion-content>
+</ion-view>

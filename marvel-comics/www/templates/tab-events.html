@@ -1,0 +1,13 @@
+<ion-view view-title="Events">
+  <ion-content class="padding">
+    <div class="list">
+        <a class="item item-thumbnail-left" ng-repeat="e in events" href="#/tab/events/{{ e.id }}">
+          <img ng-src="{{e.thumbnail.path}}.{{e.thumbnail.extension}}">
+          <h2>{{e.title}}</h2>
+          <p>{{e.description}}</p>
+          <p>{{e.creators.available}} Creators</p>
+          <p>{{e.characters.available}} Characters</p>
+        </a>
+    </div>
+  </ion-content>
+</ion-view>

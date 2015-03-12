@@ -1,0 +1,11 @@
+<ion-view view-title="Comics">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item item-avatar item-icon-right" ng-repeat="c in comics" type="item-text-wrap" href="#/tab/comics/{{c.id}}">
+        <img ng-src="{{c.thumbnail.path}}.{{c.thumbnail.extension}}">
+        <h2>{{c.title}}</h2>
+        <p>{{c.issueNumber}} Edition</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+<ion-view view-title="Detail Event">
+  <ion-content>
+    <div class="list card" ng-repeat="detail in event_detail">
+
+      <div class="item item-avatar">
+        <img ng-src="{{detail.thumbnail.path}}.{{detail.thumbnail.extension}}">
+        <h2>{{ detail.title }}</h2>
+        <p>Start Event: {{ detail.start | date:'short' }} - End Event: {{ detail.end | date:"dd/MM/yyyy"}}</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" ng-repeat="img in detail.images" ng-src="{{img.path}}/portrait_uncanny.jpg">
+        <p>{{ detail.description }}</p>
+        <p>
+          <a href="" class="subdued">Creators {{ detail.creators.available }}</a>
+          <a href="" class="subdued">Comics {{ detail.comics.available }}</a>
+          <a href="" class="subdued">Series {{ detail.series.available }}</a>
+          <a href="" class="subdued">Stories {{ detail.stories.available }}</a>
+        </p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
