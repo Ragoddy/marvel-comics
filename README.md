@@ -21,7 +21,7 @@ copiar y pegar las llaves en las siguientes variables del archivo app.js
 
 * AngularJS
 * Ionic framework
-* MD5 angular
+* MD5 angular (para generar llave hash)
 * api marvel
 
 
