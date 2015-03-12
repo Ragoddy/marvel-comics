@@ -1,29 +1,22 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Applicacion de ejemplo utilizando la api de marvel comics http://developer.marvel.com/
 
-### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### pasos para iniciar la app
 
-### How do I get set up? ###
+ejecutar npm install para las dependencias
+Registrarse en marvel developer
+Obtener llave publica y privada
+copiar y pegar las llaves en las siguientes variables del archivo app.js
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* $rootScope.key_public = "******************"
+* $rootScope.key_private = "******************"
 
-### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
+### Tecnologias y dependencias
 
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* AngularJS
+* Ionic framework
+* MD5 angular
+* api marvel

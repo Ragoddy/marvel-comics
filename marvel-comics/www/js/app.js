@@ -20,8 +20,8 @@ angular.module('ragoddy-marvel', ['ionic', 'ragoddy-marvel.controllers', 'ragodd
     }
 
     // incluir credenciales suministradas por la api de marvel
-    $rootScope.key_public = "f1904c78bf332a33a73b7fc9158eef20"
-    $rootScope.key_private = "e8c39517a871489890bba210b50e376cbbb92540"
+    $rootScope.key_public = "Ingresar llave publica"
+    $rootScope.key_private = "ingresar llave privada"
 
   });
 })
